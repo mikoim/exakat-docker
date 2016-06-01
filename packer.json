@@ -1,0 +1,22 @@
+{
+    "builders": [{
+        "type": "docker",
+        "image": "ubuntu:xenial",
+        "commit": true
+    }],
+    "provisioners": [{
+        "type": "shell",
+        "inline": [
+            "apt-get -y update",
+            "apt-get -y install ansible apt-utils dialog"
+        ]
+    }, {
+        "type": "ansible-local",
+        "playbook_dir": ".ansible",
+        "playbook_file": ".ansible/exakat.yml"
+    }],
+    "post-processors": [{
+        "type": "docker-tag",
+        "repository": "mikoim/exakat-docker"
+    }]
+}
