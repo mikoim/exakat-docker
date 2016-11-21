@@ -1,10 +1,10 @@
-# Exakat-docker
+# exakat-docker
 
 [![Docker Stars](https://img.shields.io/docker/stars/mikoim/exakat-docker.svg)](https://hub.docker.com/r/mikoim/exakat-docker/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/mikoim/exakat-docker.svg)](https://hub.docker.com/r/mikoim/exakat-docker/)
 [![Docker Automated buil](https://img.shields.io/docker/automated/mikoim/exakat-docker.svg)](https://hub.docker.com/r/mikoim/exakat-docker/)
 
-Builds a docker container with [exakat](http://www.exakat.io/) and all dependencies installed.
+Build a docker container with [exakat](http://www.exakat.io/) and all dependencies installed.
 
 ## How do I use it?
 
@@ -44,7 +44,7 @@ Pros:
 
 Cons:
 
-* May be outdated (Sorry, I haven't used CI for this project at this time.)
+* May be outdated (Last pushed: **Mon, 21 Nov 2016 21:03:00 +0900**)
 
 ---
 
