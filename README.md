@@ -44,7 +44,7 @@ Pros:
 
 Cons:
 
-* May be outdated (Last pushed: **Mon, 21 Nov 2016 21:03:00 +0900**)
+* ~~May be outdated~~ (Now automated weekly builds available :smile:)
 
 ---
 
