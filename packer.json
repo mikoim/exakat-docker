@@ -8,7 +8,7 @@
         "type": "shell",
         "inline": [
             "apt-get -y update",
-            "apt-get -y install ansible apt-utils dialog"
+            "apt-get -y install ansible apt-utils dialog bzip2"
         ]
     }, {
         "type": "ansible-local",

@@ -1,10 +1,5 @@
 ---
-- file: path=/opt/exakat state=directory
+- name: Create installation directory
+  file: path=/opt/exakat state=directory mode=0777
   tags:
     - common
-
-- apt_repository: repo='deb http://archive.ubuntu.com/ubuntu/ precise main restricted' state=present update_cache=no
-  tags:
-    - common
-
-- lineinfile: dest=/etc/apt/apt.conf.d/default-xenial line="APT::Default-Release \"xenial\";" create=yes

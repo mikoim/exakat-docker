@@ -1,57 +1,10 @@
 ---
-- apt: update_cache=yes
+- name: download latest exakat
+  get_url: url=http://dist.exakat.io/versions/index.php?file=latest dest=/opt/exakat/exakat.phar
   tags:
     - exakat
 
-# Common configurations to be run on all hosts
-- name: clean exakat
-  file: path=/opt/exakat/exakat.phar state=absent
+- name: run doctor
+  shell: cd /opt/exakat/; php exakat.phar doctor
   tags:
     - exakat
-
-- name: clean exakat old config
-  file: path=/opt/exakat/config state=absent
-  tags:
-    - exakat
-
-- name: download exakat
-  get_url: url=http://dist.exakat.io/versions/index.php?file=latest dest=/opt/exakat/exakat.phar mode=0777
-  tags:
-    - exakat
-
-- name: test exakat
-  shell: php /opt/exakat/exakat.phar doctor
-  tags:
-    - exakat
-
-- name: test exakat-PHP
-  lineinfile: dest=/opt/exakat/config/exakat.ini regexp="php          = "= line="php          = /usr/local/bin/php70"
-  tags:
-    - exakat
-
-- name: test exakat-PHP 7.1
-  lineinfile: dest=/opt/exakat/config/exakat.ini regexp=";php71        = /path/to/php71"= line="php71        = /usr/local/bin/php71"
-  tags:
-    - exakat
-
-- name: test exakat-PHP 7.0
-  lineinfile: dest=/opt/exakat/config/exakat.ini regexp=";php70        = /path/to/php70"= line="php70        = /usr/local/bin/php70"
-  tags:
-    - exakat
-
-- name: test exakat-PHP 5.6
-  lineinfile: dest=/opt/exakat/config/exakat.ini regexp=";php56        = /path/to/php56"= line="php56        = /usr/local/bin/php56"
-  tags:
-    - exakat
-
-- name: test exakat-PHP 5.5
-  lineinfile: dest=/opt/exakat/config/exakat.ini regexp=";php55        = /path/to/php55"= line="php55        = /usr/local/bin/php55"
-  tags:
-    - exakat
-
-- name: test exakat-PHP 5.6
-  lineinfile: dest=/opt/exakat/config/exakat.ini regexp=";php54        = /path/to/php56"= line="php54        = /usr/local/bin/php54"
-  tags:
-    - exakat
-
-## Still needs to modify the config/exakat.ini file

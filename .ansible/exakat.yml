@@ -1,9 +1,14 @@
 ---
 - name: Setup exakat
   hosts: all
+  tasks:
+    - name: Create installation directory
+      file: path=/opt/exakat state=directory mode=0777
   roles:
     - common
+    - php
     - java8
     - neo4j
-    - php
     - exakat
+#  environment:
+#    http_proxy: http://localhost:8080/
