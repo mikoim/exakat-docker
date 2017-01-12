@@ -1,5 +1,11 @@
 # exakat-docker
 
+This repository is **deprecated**. Official docker container images have been released. Thank you for using!
+
+[https://github.com/exakat/exakat-docker](https://github.com/exakat/exakat-docker)
+
+---
+
 [![Docker Stars](https://img.shields.io/docker/stars/mikoim/exakat-docker.svg)](https://hub.docker.com/r/mikoim/exakat-docker/)
 [![Docker Pulls](https://img.shields.io/docker/pulls/mikoim/exakat-docker.svg)](https://hub.docker.com/r/mikoim/exakat-docker/)
 [![Docker Automated buil](https://img.shields.io/docker/automated/mikoim/exakat-docker.svg)](https://hub.docker.com/r/mikoim/exakat-docker/)
